@@ -3,6 +3,7 @@
     package="com.alura.daniel.agenda">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -25,6 +26,11 @@
             android:name=".FormularioActivity"
             android:label="Formulário">
         </activity>
+        <receiver android:name=".receiver.SMSReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVER"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

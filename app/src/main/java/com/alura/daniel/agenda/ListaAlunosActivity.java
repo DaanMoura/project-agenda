@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.alura.daniel.agenda.adapter.AlunosAdapter;
 import com.alura.daniel.agenda.dao.AlunoDAO;
 import com.alura.daniel.agenda.modelo.Aluno;
 
@@ -34,6 +35,11 @@ public class ListaAlunosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_alunos);
+
+        if(ActivityCompat.checkSelfPermission(ListaAlunosActivity.this, android.Manifest.permission.RECEIVE_SMS)!=PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(ListaAlunosActivity.this,
+                    new String[]{android.Manifest.permission.RECEIVE_SMS}, 235);
+        }
 
         listaAlunos = (ListView) findViewById(R.id.lista_alunos);
 
@@ -64,7 +70,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         List<Aluno> alunos = dao.buscaAlunos();
         dao.close();
 
-        ArrayAdapter<Aluno> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, alunos);
+        AlunosAdapter adapter = new AlunosAdapter(this, alunos);
         listaAlunos.setAdapter(adapter);
     }
 
