@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.alura.daniel.agenda.adapter.AlunosAdapter;
+import com.alura.daniel.agenda.converter.AlunoConverter;
 import com.alura.daniel.agenda.dao.AlunoDAO;
 import com.alura.daniel.agenda.modelo.Aluno;
 
@@ -92,7 +93,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_enviar_notas:
-                Toast.makeText(this, "Enviando notas...", Toast.LENGTH_LONG).show();
+                new EnviaAlunosTask(this).execute();
                 break;
         }
         return super.onOptionsItemSelected(item);
