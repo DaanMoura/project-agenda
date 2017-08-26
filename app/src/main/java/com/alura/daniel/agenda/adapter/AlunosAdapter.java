@@ -52,7 +52,7 @@ public class AlunosAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View view = convertView;
-        if(convertView == null) {
+        if(view == null) {
             view = inflater.inflate(R.layout.list_item, null);
         }
 
@@ -61,6 +61,16 @@ public class AlunosAdapter extends BaseAdapter {
 
         TextView campoTelefone = (TextView) view.findViewById(R.id.item_telefone);
         campoTelefone.setText(aluno.getTelefone());
+
+        TextView campoEndereco = (TextView) view.findViewById(R.id.item_endereco);
+        if(campoEndereco != null){
+            campoEndereco.setText(aluno.getEndereco());
+        }
+
+        TextView campoSite = (TextView) view.findViewById(R.id.item_site);
+        if(campoSite != null){
+            campoSite.setText(aluno.getSite());
+        }
 
         ImageView campoFoto = (ImageView) view.findViewById(R.id.item_foto);
         String caminhoFoto = aluno.getCaminhoFoto();
