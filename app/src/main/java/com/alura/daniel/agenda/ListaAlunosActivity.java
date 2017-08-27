@@ -95,6 +95,10 @@ public class ListaAlunosActivity extends AppCompatActivity {
             case R.id.menu_enviar_notas:
                 new EnviaAlunosTask(this).execute();
                 break;
+            case R.id.menu_baixar_provas:
+                Intent vaiParaProvas = new Intent(this, ProvasActivity.class);
+                startActivity(vaiParaProvas);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -104,7 +108,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
         final Aluno aluno = (Aluno) listaAlunos.getItemAtPosition(info.position);
 
-        MenuItem itemLigar = menu.add("Ligar");
+        MenuItem itemLigar = menu.add(R.string.menu_ligar);
         itemLigar.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -128,7 +132,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         intentSMS.setData(Uri.parse("sms:"+aluno.getTelefone()));
         itemSMS.setIntent(intentSMS);
 
-        MenuItem itemVisitarSite = menu.add("Visitar site");
+        MenuItem itemVisitarSite = menu.add(R.string.menu_site);
         Intent intentSite = new Intent(Intent.ACTION_VIEW);
         String site = aluno.getSite();
         if(!site.startsWith("http://")){
@@ -137,12 +141,12 @@ public class ListaAlunosActivity extends AppCompatActivity {
         intentSite.setData(Uri.parse(site));
         itemVisitarSite.setIntent(intentSite);
 
-        MenuItem itemMapa = menu.add("Achar no Mapa");
+        MenuItem itemMapa = menu.add(R.string.menu_mapa);
         Intent intentMapa = new Intent(Intent.ACTION_VIEW);
         intentMapa.setData(Uri.parse("geo:0,0?="+aluno.getEndereco()));
         itemMapa.setIntent(intentMapa);
 
-        MenuItem deletar = menu.add("Deletar");
+        MenuItem deletar = menu.add(R.string.menu_deletar);
         deletar.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             @Override
             public boolean onMenuItemClick(MenuItem item) {

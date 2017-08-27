@@ -4,7 +4,12 @@
     tools:context="com.alura.daniel.agenda.ListaAlunosActivity">
     <item
         android:id="@+id/menu_enviar_notas"
-        android:title="Enviar Notas"
+        android:title="@string/enviar_notas"
         android:icon="@drawable/ic_enviar"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_baixar_provas"
+        android:title="@string/baixar_notas"
+        android:icon="@drawable/ic_receber"
+        app:showAsAction="always"/>
 </menu>

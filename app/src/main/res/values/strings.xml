@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Agenda</string>
     <string name="action_settings">Settings</string>
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="telefone">Telefone</string>
+    <string name="site">Site</string>
+    <string name="form_title">Formulário</string>
+    <string name="enviar_notas">Enviar notas</string>
+    <string name="baixar_notas">Baixar provas</string>
+    <string name="provas">Provas</string>
+
+    <string name="menu_ligar">Ligar</string>
+    <string name="menu_site">Visitar site</string>
+    <string name="menu_mapa">Achar no mapa</string>
+    <string name="menu_deletar">Deletar</string>
 </resources>

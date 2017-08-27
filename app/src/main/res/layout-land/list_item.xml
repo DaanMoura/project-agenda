@@ -21,7 +21,9 @@
             android:text="Nome"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:paddingLeft="10dp" />
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,6 +31,8 @@
             android:text="Telefone"
             android:textSize="20sp"
             android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:paddingTop="8dp"/>
     </LinearLayout>
 
@@ -37,7 +41,9 @@
         android:layout_height="match_parent"
         android:gravity="right"
         android:orientation="vertical"
-        android:layout_marginRight="16dp">
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
 
         <TextView
             android:id="@+id/item_endereco"
@@ -46,7 +52,7 @@
             android:paddingTop="8dp"
             android:text="Endereço"
             android:textSize="16sp"
-            android:gravity="right"/>
+            android:gravity="end"/>
 
         <TextView
             android:id="@+id/item_site"
