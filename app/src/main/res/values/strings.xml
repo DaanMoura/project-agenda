@@ -14,4 +14,7 @@
     <string name="menu_site">Visitar site</string>
     <string name="menu_mapa">Achar no mapa</string>
     <string name="menu_deletar">Deletar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

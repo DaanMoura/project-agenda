@@ -36,10 +36,10 @@
         <activity
             android:name=".ProvasActivity"
             android:label="@string/provas" />
-        <activity android:name=".DetalhesProvaActivity"
-            android:label="@string/provas">
-
-        </activity>
+        <activity
+            android:name=".DetalhesProvaActivity"
+            android:label="@string/provas"></activity>
+        <activity android:name=".ActivityProvasTablet"></activity>
     </application>
 
 </manifest>
