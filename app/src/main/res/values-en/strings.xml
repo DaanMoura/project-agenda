@@ -15,4 +15,5 @@
     <string name="menu_site">Visit site</string>
     <string name="menu_mapa">Find on map</string>
     <string name="menu_deletar">Delete</string>
+    <string name="visualizar_no_mapa">Visualize on map</string>
 </resources>

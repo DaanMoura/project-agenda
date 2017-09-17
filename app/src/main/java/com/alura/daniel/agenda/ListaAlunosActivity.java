@@ -99,6 +99,9 @@ public class ListaAlunosActivity extends AppCompatActivity {
                 Intent vaiParaProvas = new Intent(this, ProvasActivity.class);
                 startActivity(vaiParaProvas);
                 break;
+            case R.id.menu_mapa:
+                Intent vaiParaMapa = new Intent(this, MapaActivity.class);
+                startActivity(vaiParaMapa);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -143,7 +146,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
 
         MenuItem itemMapa = menu.add(R.string.menu_mapa);
         Intent intentMapa = new Intent(Intent.ACTION_VIEW);
-        intentMapa.setData(Uri.parse("geo:0,0?="+aluno.getEndereco()));
+        intentMapa.setData(Uri.parse("geo:0,0?q="+aluno.getEndereco()));
         itemMapa.setIntent(intentMapa);
 
         MenuItem deletar = menu.add(R.string.menu_deletar);
